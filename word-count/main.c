@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     int characterCount = 0;
     int wordCount = 0;
     int lineCount = 0;
-    if (argc > 1 && argv[1] == NULL)
+    if (argc != 2 && argv[1] == NULL)
     {
         fprintf(stderr, "Usage: wc <file-name>");
         return EXIT_FAILURE;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     if (file == NULL)
     {
-        fprintf(stderr, "File '%s' does not exist. Please enter a valid filename.", argv[1]);
+        fprintf(stderr, "File '%s' does not exist. Please enter a valid filename.\n", argv[1]);
         return EXIT_FAILURE;
     }
 
